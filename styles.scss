@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark:400,500,600,700|Rozha+One');
+
+$main-font: 'Palanquin Dark', sans-serif;
+$aside-font: 'Rozha One', serif;
+$white: #fff;
+$blue: #348db2;
+$grey: #e5e5e5;
+$dark-grey: #808080;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font: 100% $main-font;
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+}
+
+/*main*/
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+.content {	
+	margin: 0 auto;
+	max-width: 950px;
+	width: 100%;
+	text-align: justify;
+}
+
+/* about section*/
+.about {
+	h1 {
+		font-size: 56px;
+		font-weight: 500;
+		position: relative;
+		&::after {
+			display: inline-block;
+			background: $blue;
+			width: 20%;
+			height: 3px;
+			position: absolute;
+			content: "";
+			line-height: 56px;
+			margin-left: 30px;
+			top: 56px;
+		}
+	}
+	.intro {
+		.social {
+			margin: 0;
+			padding: 0;
+			float: left;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			width: 8%;
+			position: relative;
+			padding-top: 70px;
+			padding-bottom: 70px;
+			a {		
+				img {
+					width: 12px;
+					margin: 8px 0;
+					&:hover {
+						-ms-transform: scale(1.8);
+						-webkit-transform: scale(1.8);
+						transform: scale(1.8);
+					}
+				}
+				&::before {
+					background: $grey;
+					width: 1px;
+					height: 50px;
+					position: absolute;
+					content: "";
+					left: 6%;
+					top: 4%;
+					cursor: none;
+				}
+				&::after {
+				    background: $grey;
+					width: 1px;
+					height: 165px;
+					position: absolute;
+					content: "";
+					left: 6%;
+					bottom: -43%;
+					cursor: none;
+				}
+			}
+		}
+		p:first-child {
+			font-size: 24px;
+			font-weight: 600;
+			word-spacing: 10px;
+			line-height: 50px;
+			margin: 0;
+		}
+		p:nth-child(2) {
+			font-size: 16px;
+			word-spacing: 5px;
+			font-weight: 500;
+			margin: 6vh 0 3vh;
+		}
+	}
+}
+
+/*description section */
+.description {
+	.content {
+		position: relative;
+	}
+	p {
+		word-spacing: 5px;
+		margin: 0;
+	}
+	.float-aside {
+		margin: 0 -100px 3vh 0;
+		.aside {
+			h3 {
+				font: 100% $main-font;
+				font-size: 32px;
+				position: relative;
+				margin: 25px 0 50px;
+				&::after {
+					display: block;
+					background: $blue;
+					width: 70px;
+					height: 3px;
+					position: absolute;
+					content: "";
+					top: 60px;
+				}
+			}
+			font: 100% $aside-font;
+			float: right;
+			width: 200px;
+			font-size: 18px;
+			text-align: left;
+			word-spacing: 4px;
+		}
+		p {
+			width: 75%;
+		}
+	}
+	.cms-notes {
+		.note-top {
+			font: 100% $aside-font;
+			font-size: 14px;
+			color: red;
+			width: 10vw;
+			position: absolute;
+			right: -22%;
+			word-spacing: 1px;
+			text-align: left;
+			margin-left: 15px;
+			margin-bottom: 10px;
+			display: flex;
+			img {
+				background-repeat: no-repeat;
+				width: 8%;
+				height: 8%;
+				display: inline-block;
+				background-size: contain;
+				font-size: 0;
+			}
+			.note-par {
+				margin-left: 15px;
+			}
+		}
+		.note-bottom {
+			font: 100% $aside-font;
+			font-size: 14px;
+			color: red;
+			width: 10vw;
+			position: absolute;
+			right: -25%;
+			bottom: 10%;
+			word-spacing: 1px;
+			text-align: left;
+			margin-top: 10px;
+		}
+	}
+}
+/*booking section*/
+.booking {
+	background: url('assets/booking_bg.png') 0/cover no-repeat;
+	height: 90vh;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 4vh;
+	overflow: hidden;
+	h2 {
+		margin: 0;
+		padding: 0;
+		color: $white;
+		font-size: 75px;
+		font-weight: 400;
+		position: relative;
+		&::after {
+			display: inline-block;
+			background: $white;
+			width: 195px;
+			height: 3px;
+			position: absolute;
+			content: "";
+			line-height: 75px;
+			margin-left: 40px;
+			top: 75px;
+		}
+	}
+}
+
