@@ -33,6 +33,7 @@ body {
 
 /* about section*/
 .about {
+	padding-left: 1%;
 	h1 {
 		font-size: 56px;
 		font-weight: 500;
@@ -112,6 +113,7 @@ body {
 
 /*description section */
 .description {
+	margin-bottom: 5vh;
 	.content {
 		position: relative;
 	}
@@ -169,7 +171,7 @@ body {
 				background-size: contain;
 				font-size: 0;
 			}
-			.note-par {
+			.note-text {
 				margin-left: 15px;
 			}
 		}
@@ -216,3 +218,137 @@ body {
 	}
 }
 
+@media (max-width: 991px) {
+	.container {
+		margin: 0 auto;
+		width: 750px;
+		width: 100%;
+		padding: 0 5%;
+	}
+	.content {	
+		margin: 0 auto;
+		max-width: 750px;
+		width: 100%;
+		text-align: justify;
+	}
+	.about {
+		h1 {
+			margin-bottom: 5%;
+		}
+		.intro {
+			.social {
+				float: none;
+				width: 35%;
+				margin-bottom: 5%;
+				padding: 0;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				a {
+					margin: 0;
+					padding: 0;
+					img {
+						width: 40%;
+						margin: 0;
+						padding: 0;
+						&:hover {
+							-ms-transform: scale(1.8);
+							-webkit-transform: scale(1.8);
+							transform: scale(1.8);
+						}
+					}
+					&::before {
+						display: none;
+					}
+					&::after {
+						display: none;
+					}
+				}
+			}
+			p:first-child {
+				margin-top: 5%;
+			}
+			p:nth-child(2) {
+				font-size: 20px;
+				margin: 3vh 0;
+			}
+		}
+	}
+	.description {
+		margin-bottom: 25vh;
+		p {
+			font-size: 20px;
+		}
+		.float-aside {
+			margin: 0 auto;
+			.aside {
+				float: none;
+				width: 80%;
+				font-size: 22px;
+				margin: 0 auto;
+				h3 {
+					font-size: 38px;
+					margin: 0 0 5%;
+					&::after {
+						top: 70px;
+					}
+				}
+			}
+			p {
+				width: 100%;
+				margin: 5% 0;
+			}
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.cms-notes {
+			margin: 5% 0;
+			.note-top {
+				font-size: 18px;
+				line-height: 18px;
+				width: 100%;
+				position: absolute;
+				bottom: -3%;
+				right: 0;
+				border-top: 3px solid $dark-grey;
+				padding-top: 2%;
+				margin-bottom: 2vh;
+				img {
+					width: 2%;
+					height: 2%;
+					transform: rotate(90deg);
+				}
+				.note-text {
+					margin-left: 15px;
+				}
+			}
+			.note-bottom {
+				font-size: 18px;
+				line-height: 18px;
+				width: 95.5%;
+				position: absolute;
+				bottom: -5%;
+				right: 0;
+				margin-top: 3vh;
+				margin-bottom: 3vh;
+				display: inline-block;
+			}
+		}
+	}
+	.booking {
+		background: url('assets/booking_bg.png') center/cover no-repeat;
+		height: 90vh;
+		padding-top: 5vh;
+		h2 {
+			margin: 0 15%;
+			&::after {
+				max-width: 20%;
+				height: 4px;
+				margin-left: 10%;
+			}
+		}
+	}
+}

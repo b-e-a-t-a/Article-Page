@@ -21,68 +21,70 @@ body {
   text-align: justify; }
 
 /* about section*/
-.about h1 {
-  font-size: 56px;
-  font-weight: 500;
-  position: relative; }
-  .about h1::after {
-    display: inline-block;
-    background: #348db2;
-    width: 20%;
-    height: 3px;
-    position: absolute;
-    content: "";
-    line-height: 56px;
-    margin-left: 30px;
-    top: 56px; }
-.about .intro .social {
-  margin: 0;
-  padding: 0;
-  float: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 8%;
-  position: relative;
-  padding-top: 70px;
-  padding-bottom: 70px; }
-  .about .intro .social a img {
-    width: 12px;
-    margin: 8px 0; }
-    .about .intro .social a img:hover {
-      -ms-transform: scale(1.8);
-      -webkit-transform: scale(1.8);
-      transform: scale(1.8); }
-  .about .intro .social a::before {
-    background: #e5e5e5;
-    width: 1px;
-    height: 50px;
-    position: absolute;
-    content: "";
-    left: 6%;
-    top: 4%;
-    cursor: none; }
-  .about .intro .social a::after {
-    background: #e5e5e5;
-    width: 1px;
-    height: 165px;
-    position: absolute;
-    content: "";
-    left: 6%;
-    bottom: -43%;
-    cursor: none; }
-.about .intro p:first-child {
-  font-size: 24px;
-  font-weight: 600;
-  word-spacing: 10px;
-  line-height: 50px;
-  margin: 0; }
-.about .intro p:nth-child(2) {
-  font-size: 16px;
-  word-spacing: 5px;
-  font-weight: 500;
-  margin: 6vh 0 3vh; }
+.about {
+  padding-left: 1%; }
+  .about h1 {
+    font-size: 56px;
+    font-weight: 500;
+    position: relative; }
+    .about h1::after {
+      display: inline-block;
+      background: #348db2;
+      width: 20%;
+      height: 3px;
+      position: absolute;
+      content: "";
+      line-height: 56px;
+      margin-left: 30px;
+      top: 56px; }
+  .about .intro .social {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 8%;
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 70px; }
+    .about .intro .social a img {
+      width: 12px;
+      margin: 8px 0; }
+      .about .intro .social a img:hover {
+        -ms-transform: scale(1.8);
+        -webkit-transform: scale(1.8);
+        transform: scale(1.8); }
+    .about .intro .social a::before {
+      background: #e5e5e5;
+      width: 1px;
+      height: 50px;
+      position: absolute;
+      content: "";
+      left: 6%;
+      top: 4%;
+      cursor: none; }
+    .about .intro .social a::after {
+      background: #e5e5e5;
+      width: 1px;
+      height: 165px;
+      position: absolute;
+      content: "";
+      left: 6%;
+      bottom: -43%;
+      cursor: none; }
+  .about .intro p:first-child {
+    font-size: 24px;
+    font-weight: 600;
+    word-spacing: 10px;
+    line-height: 50px;
+    margin: 0; }
+  .about .intro p:nth-child(2) {
+    font-size: 16px;
+    word-spacing: 5px;
+    font-weight: 500;
+    margin: 6vh 0 3vh; }
 
 /*description section */
 .description .content {
@@ -133,7 +135,7 @@ body {
     display: inline-block;
     background-size: contain;
     font-size: 0; }
-  .description .cms-notes .note-top .note-par {
+  .description .cms-notes .note-top .note-text {
     margin-left: 15px; }
 .description .cms-notes .note-bottom {
   font: 100% "Rozha One", serif;
@@ -172,5 +174,112 @@ body {
       line-height: 75px;
       margin-left: 40px;
       top: 75px; }
+
+@media (max-width: 991px) {
+  .container {
+    margin: 0 auto;
+    width: 750px;
+    width: 100%;
+    padding: 0 5%; }
+
+  .content {
+    margin: 0 auto;
+    max-width: 750px;
+    width: 100%;
+    text-align: justify; }
+
+  .about h1 {
+    margin-bottom: 5%; }
+  .about .intro .social {
+    float: none;
+    width: 35%;
+    margin-bottom: 5%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .about .intro .social a {
+      margin: 0;
+      padding: 0; }
+      .about .intro .social a img {
+        width: 40%;
+        margin: 0;
+        padding: 0; }
+        .about .intro .social a img:hover {
+          -ms-transform: scale(1.8);
+          -webkit-transform: scale(1.8);
+          transform: scale(1.8); }
+      .about .intro .social a::before {
+        display: none; }
+      .about .intro .social a::after {
+        display: none; }
+  .about .intro p:first-child {
+    margin-top: 5%; }
+  .about .intro p:nth-child(2) {
+    font-size: 20px;
+    margin: 3vh 0; }
+
+  .description {
+    margin-bottom: 25vh; }
+    .description p {
+      font-size: 20px; }
+    .description .float-aside {
+      margin: 0 auto; }
+      .description .float-aside .aside {
+        float: none;
+        width: 80%;
+        font-size: 22px;
+        margin: 0 auto; }
+        .description .float-aside .aside h3 {
+          font-size: 38px;
+          margin: 0 0 5%; }
+          .description .float-aside .aside h3::after {
+            top: 70px; }
+      .description .float-aside p {
+        width: 100%;
+        margin: 5% 0; }
+    .description img {
+      max-width: 100%;
+      height: auto; }
+    .description .cms-notes {
+      margin: 5% 0; }
+      .description .cms-notes .note-top {
+        font-size: 18px;
+        line-height: 18px;
+        width: 100%;
+        position: absolute;
+        bottom: -3%;
+        right: 0;
+        border-top: 3px solid #808080;
+        padding-top: 2%;
+        margin-bottom: 2vh; }
+        .description .cms-notes .note-top img {
+          width: 2%;
+          height: 2%;
+          transform: rotate(90deg); }
+        .description .cms-notes .note-top .note-text {
+          margin-left: 15px; }
+      .description .cms-notes .note-bottom {
+        font-size: 18px;
+        line-height: 18px;
+        width: 95.5%;
+        position: absolute;
+        bottom: -5%;
+        right: 0;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        display: inline-block; }
+
+  .booking {
+    background: url("assets/booking_bg.png") center/cover no-repeat;
+    height: 90vh;
+    padding-top: 5vh; }
+    .booking h2 {
+      margin: 0 15%; }
+      .booking h2::after {
+        max-width: 20%;
+        height: 4px;
+        margin-left: 10%; } }
 
 /*# sourceMappingURL=styles.css.map */
