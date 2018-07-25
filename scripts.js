@@ -3,109 +3,77 @@ var today = new Date();
 var year = today.getFullYear();
 var month = today.getMonth() + 1;
 
-console.log(month);
 
 var day = today.getDate(); //25
 
 window.onload = function() {
+	//console.log('today: ' + today);
 	console.log('todays day: ' + day);
 }
 
-var li = document.getElementsByTagName('li');
+var td = document.getElementsByTagName('td');
 
 function markToday() {
 
-	for ( var i = 0; i < li.length; i++) {
+	for ( var i = 0; i < td.length; i++) {
 
-		var text = li[i].innerText;
+		var text = td[i].innerText;
 
 		if (day == text) {
-			var span = document.createElement('span');
-			li[i].innerHTML = '';
-			span.innerHTML = day;
-			li[i].appendChild(span);
-			span.className += 'active';
-			li[i].className += 'present';
+			//var span = document.createElement('span');
+			td[i].innerHTML = day;
+			//td[i].appendChild(span);
+			//span.className += 'active';
+			td[i].className += ' active';
 		}
 		else if (day > text) {
-			li[i].className += 'past';
+			if (td[i].classList.contains('past')) {
+
+			} else {
+				td[i].className += ' past';
+			}
 		}
 	}
 }
 
 markToday();
 
+
 function reserveDay() {
 
-	var li = document.querySelectorAll("li");
+	var td = document.querySelectorAll("td");
 
-	for ( var i = 0; i < li.length; i++) {
+	for ( var i = 0; i < td.length; i++) {
 		
+		td[i].addEventListener('click', function(e) {
 
-		li[i].addEventListener('click', function(e) {
+			document.querySelector('.active').classList.toggle('active', false);
+			
+
 			var $target = e.target;
 			console.log($target);
-			if ($target.classList.contains('present')) {
 
-                $target.classList.remove('present');
+			if ($target.classList.contains('active')) {
+
+                $target.classList.remove('active');
+
+            } else if ($target.classList.contains('past') || $target.classList.contains('disabled')) {
+            	alert('Incorrect date');
+            	markToday();
+
+            } else {
+            	$target.classList.add('active');
             }
 
 			var pickedDay = $target.innerHTML;
-			var span = document.createElement('span');
-			$target.appendChild(span);
-			span.classList.add('active');
-			span.innerHTML = pickedDay;
-			$target.classList.toggle('present');
-			
-			
-			
+
+			console.clear();
+			console.log('picked day: ' + pickedDay);
+
 		});
 
 	}
-
-	
-
-	
 	
 }
 
 reserveDay();
-
-
-
-//var pickedDay = document.getElementsByTagName('li').innerHTML = day;
-
-/*
-function test() {
-	var disabled = document.getElementsByClassName('disabled');
-
-
-	var dodane = document.getElementsByTagName('ul');
-
-	dodane[0].className += ' hello';
-
-	console.log(disabled);
-	console.log(dodane[0].className);
-	
-
-	var active = document.getElementsByClassName('active');
-	var text = active[0].innerHTML;
-
-	console.log('zaznaczona: ' + text);
-
-}
-
-test();
-*/
-
-/*
-window.addEventListener('load', function () {
-	calendar.init({
-		disablePastDays: true
-	});
-});
-
-
-}
-
-*/
