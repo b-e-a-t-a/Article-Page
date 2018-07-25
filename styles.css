@@ -154,10 +154,11 @@ body {
 /*booking section*/
 .booking {
   background: url("assets/booking_bg.png") 0/cover no-repeat;
+  background-position: center;
   height: 90vh;
   width: 100%;
   margin: 0 auto;
-  padding-top: 4vh; }
+  padding-top: 5vh; }
   .booking h2 {
     margin: 0 0 6vh;
     padding: 0;
@@ -180,58 +181,76 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .booking .reservation-box .calendar {
-      color: #fff;
-      border-radius: 20px;
-      padding: 30px 0;
-      background-color: rgba(0, 0, 0, 0.5);
+    .booking .reservation-box .calendar-container {
+      position: relative;
       width: 49%; }
-      .booking .reservation-box .calendar .month {
+      .booking .reservation-box .calendar-container .calendar-bg {
+        background-image: url("assets/booking_bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        z-index: 99;
         width: 100%;
-        text-align: center;
-        padding: 25px 160px 20px; }
-        .booking .reservation-box .calendar .month ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0; }
-          .booking .reservation-box .calendar .month ul li {
-            font-size: 20px; }
-        .booking .reservation-box .calendar .month .prev {
-          float: left; }
-        .booking .reservation-box .calendar .month .next {
-          float: right; }
-      .booking .reservation-box .calendar .table {
-        width: 100%;
-        padding: 10px 50px; }
-        .booking .reservation-box .calendar .table .weekdays {
+        -webkit-filter: blur(10px);
+        filter: blur(10px); }
+      .booking .reservation-box .calendar-container .calendar {
+        position: relative;
+        z-index: 100;
+        color: #fff;
+        border-radius: 20px;
+        padding: 30px 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%; }
+        .booking .reservation-box .calendar-container .calendar .month {
           width: 100%;
-          margin: 0; }
-          .booking .reservation-box .calendar .table .weekdays th {
-            text-align: center;
-            padding-bottom: 12px; }
-        .booking .reservation-box .calendar .table tr {
-          text-align: center; }
-        .booking .reservation-box .calendar .table td {
-          padding: 8px;
-          cursor: pointer;
-          position: relative; }
-        .booking .reservation-box .calendar .table .active {
-          background: #348db2;
-          border-radius: 50%; }
-        .booking .reservation-box .calendar .table .past {
-          opacity: .4;
-          cursor: not-allowed; }
-        .booking .reservation-box .calendar .table .disabled {
-          cursor: not-allowed; }
-          .booking .reservation-box .calendar .table .disabled:after {
-            content: '';
-            border-radius: 50%;
-            background-color: #348db2;
-            width: 5px;
-            height: 5px;
-            position: absolute;
-            top: 10px;
-            right: 10px; }
+          text-align: center;
+          padding: 25px 160px 20px; }
+          .booking .reservation-box .calendar-container .calendar .month ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0; }
+            .booking .reservation-box .calendar-container .calendar .month ul li {
+              font-size: 20px; }
+          .booking .reservation-box .calendar-container .calendar .month .prev {
+            float: left; }
+          .booking .reservation-box .calendar-container .calendar .month .next {
+            float: right; }
+        .booking .reservation-box .calendar-container .calendar .table {
+          width: 100%;
+          padding: 10px 50px; }
+          .booking .reservation-box .calendar-container .calendar .table .weekdays {
+            width: 100%;
+            margin: 0; }
+            .booking .reservation-box .calendar-container .calendar .table .weekdays th {
+              text-align: center;
+              padding-bottom: 12px; }
+          .booking .reservation-box .calendar-container .calendar .table tr {
+            text-align: center; }
+          .booking .reservation-box .calendar-container .calendar .table td {
+            padding: 8px;
+            cursor: pointer;
+            position: relative; }
+          .booking .reservation-box .calendar-container .calendar .table .active {
+            background: #348db2;
+            border-radius: 50%; }
+          .booking .reservation-box .calendar-container .calendar .table .past {
+            opacity: .4;
+            cursor: not-allowed; }
+          .booking .reservation-box .calendar-container .calendar .table .disabled {
+            cursor: not-allowed; }
+            .booking .reservation-box .calendar-container .calendar .table .disabled:after {
+              content: '';
+              border-radius: 50%;
+              background-color: #348db2;
+              width: 5px;
+              height: 5px;
+              position: absolute;
+              top: 10px;
+              right: 10px; }
     .booking .reservation-box .contact {
       width: 49%;
       background-color: #fff;
@@ -287,7 +306,8 @@ body {
           font-size: 16px;
           font-weight: 600;
           cursor: pointer;
-          outline: none; }
+          outline: none;
+          box-shadow: 0 30px 20px -20px #c0cbd0; }
           .booking .reservation-box .contact form button:hover {
             background-color: green; }
 
@@ -389,7 +409,9 @@ body {
 
   .booking {
     background: url("assets/booking_bg.png") center/cover no-repeat;
+    background-position: center;
     height: auto;
+    width: 100%;
     padding: 5vh 0 12vh; }
     .booking .content {
       margin: 0 auto;
@@ -405,37 +427,43 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center; }
-        .booking .content .reservation-box .calendar {
-          width: 100%;
-          padding: 4vh 0 4vh;
-          margin: 8vh 0 6vh; }
-          .booking .content .reservation-box .calendar .month {
-            padding: 25px 15vh 20px; }
-            .booking .content .reservation-box .calendar .month ul li {
-              font-size: 36px; }
-          .booking .content .reservation-box .calendar .table {
-            max-width: 100%;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: auto; }
-            .booking .content .reservation-box .calendar .table .weekdays {
-              font-size: 36px;
-              padding: 10px 20px; }
-            .booking .content .reservation-box .calendar .table td {
-              font-size: 30px;
-              padding: 10px 20px 20px;
-              position: relative; }
-            .booking .content .reservation-box .calendar .table .disabled:after {
-              content: '';
-              border-radius: 50%;
-              background-color: #348db2;
-              width: 10px;
-              height: 10px;
-              position: absolute;
-              top: 12px;
-              right: 12px; }
+        .booking .content .reservation-box .calendar-container {
+          width: 100%; }
+          .booking .content .reservation-box .calendar-container .calendar-bg {
+            background-size: cover;
+            padding: 4vh 0 4vh;
+            margin: 8vh 0 6vh; }
+          .booking .content .reservation-box .calendar-container .calendar {
+            width: 100%;
+            padding: 4vh 0 4vh;
+            margin: 8vh 0 6vh; }
+            .booking .content .reservation-box .calendar-container .calendar .month {
+              padding: 25px 15vh 20px; }
+              .booking .content .reservation-box .calendar-container .calendar .month ul li {
+                font-size: 36px; }
+            .booking .content .reservation-box .calendar-container .calendar .table {
+              max-width: 100%;
+              padding: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow-x: auto; }
+              .booking .content .reservation-box .calendar-container .calendar .table .weekdays {
+                font-size: 36px;
+                padding: 10px 20px; }
+              .booking .content .reservation-box .calendar-container .calendar .table td {
+                font-size: 30px;
+                padding: 10px 20px 20px;
+                position: relative; }
+              .booking .content .reservation-box .calendar-container .calendar .table .disabled:after {
+                content: '';
+                border-radius: 50%;
+                background-color: #348db2;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 12px;
+                right: 12px; }
         .booking .content .reservation-box .contact {
           width: 100%;
           padding: 0 4%; }

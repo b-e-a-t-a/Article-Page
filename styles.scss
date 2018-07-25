@@ -5,7 +5,8 @@ $aside-font: 'Rozha One', serif;
 $white: #fff;
 $blue: #348db2;
 $grey: #e5e5e5;
-$dark-grey: #808080;
+$darkGrey: #808080;
+$lightGrey: #c0cbd0;
 $lightBlue: #eaf3f7;
 
 * {
@@ -193,10 +194,11 @@ body {
 /*booking section*/
 .booking {
 	background: url('assets/booking_bg.png') 0/cover no-repeat;
+	background-position: center;
 	height: 90vh;
 	width: 100%;
 	margin: 0 auto;
-	padding-top: 4vh;
+	padding-top: 5vh;
 	h2 {
 		margin: 0 0 6vh;
 		padding: 0;
@@ -221,69 +223,89 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		.calendar {
-			color: $white;
-			border-radius: 20px;
-			padding: 30px 0;
-			background-color: rgba(0, 0, 0, .5);
-			width: 49%;
-			.month {
+		.calendar-container {
+		 	position: relative;
+		 	width: 49%;
+		 	.calendar-bg {
+		 		background-image: url('assets/booking_bg.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+		 		position: absolute;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				z-index: 99;
 				width: 100%;
-				text-align: center;
-				padding: 25px 160px 20px;
-				ul {
-					list-style-type: none;
-					margin: 0;
-					padding: 0;
-					li {
-						font-size: 20px;
-					}
-				}
-				.prev {
-					float: left;
-				}
-				.next {
-					float: right;
-				}
-			}
-			.table {
+  				-webkit-filter: blur(10px);
+ 				filter: blur(10px);
+		 	}
+		 	.calendar {
+		 		position: relative;
+  				z-index: 100;
+				color: $white;
+				border-radius: 20px;
+				padding: 30px 0;
+				background-color: rgba(0, 0, 0, .5);
 				width: 100%;
-				padding: 10px 50px;
-				.weekdays {
+				.month {
 					width: 100%;
-					margin: 0;		
-					th {
-						text-align: center;
-						padding-bottom: 12px;
+					text-align: center;
+					padding: 25px 160px 20px;
+					ul {
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+						li {
+							font-size: 20px;
+						}
+					}
+					.prev {
+						float: left;
+					}
+					.next {
+						float: right;
 					}
 				}
-				tr {
-					text-align: center;
-				}
-				td {
-					padding: 8px;
-					cursor: pointer;
-					position: relative;
-				}
-				.active {		
-					background: $blue;
-					border-radius: 50%;
-				}
-				.past {
-					opacity: .4;
-					cursor: not-allowed;
-				}
-				.disabled {
-					cursor: not-allowed;
-					&:after{
-						content: '';
+				.table {
+					width: 100%;
+					padding: 10px 50px;
+					.weekdays {
+						width: 100%;
+						margin: 0;		
+						th {
+							text-align: center;
+							padding-bottom: 12px;
+						}
+					}
+					tr {
+						text-align: center;
+					}
+					td {
+						padding: 8px;
+						cursor: pointer;
+						position: relative;
+					}
+					.active {		
+						background: $blue;
 						border-radius: 50%;
-						background-color: $blue;
-						width: 5px;
-						height: 5px;
-						position: absolute;
-						top: 10px;
-						right: 10px;
+					}
+					.past {
+						opacity: .4;
+						cursor: not-allowed;
+					}
+					.disabled {
+						cursor: not-allowed;
+						&:after{
+							content: '';
+							border-radius: 50%;
+							background-color: $blue;
+							width: 5px;
+							height: 5px;
+							position: absolute;
+							top: 10px;
+							right: 10px;
+						}
 					}
 				}
 			}
@@ -350,6 +372,7 @@ body {
 					font-weight: 600;
 					cursor: pointer;
 					outline: none;
+					box-shadow: 0 30px 20px -20px $lightGrey;
 					&:hover {
 						background-color: green;
 					}
@@ -456,7 +479,7 @@ body {
 				position: absolute;
 				bottom: -3%;
 				right: 0;
-				border-top: 3px solid $dark-grey;
+				border-top: 3px solid $darkGrey;
 				padding-top: 2%;
 				margin-bottom: 2vh;
 				img {
@@ -483,7 +506,9 @@ body {
 	}
 	.booking {
 		background: url('assets/booking_bg.png') center/cover no-repeat;
+		background-position: center;
 		height: auto;
+		width: 100%;
 		padding: 5vh 0 12vh;
 		.content {
 			margin: 0 auto;
@@ -501,48 +526,55 @@ body {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				.calendar {
+				.calendar-container {
 					width: 100%;
-					padding: 4vh 0 4vh;
-					margin: 8vh 0 6vh;
-					.month {
-						padding: 25px 15vh 20px;
-						ul {
-							li {
-								font-size: 36px;
-							}
-						}
+					.calendar-bg {
+						background-size: cover;
+						padding: 4vh 0 4vh;
+						margin: 8vh 0 6vh;
 					}
-					.table {
-						max-width: 100%;
-						padding: 10px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						overflow-x: auto;
-						.weekdays {
-							font-size: 36px;
-							padding: 10px 20px;
-						}
-						td {
-							font-size: 30px;
-							padding: 10px 20px 20px;
-							position: relative;
-							
-						}
-						.disabled {
-							&:after{
-								content: '';
-								border-radius: 50%;
-								background-color: $blue;
-								width: 10px;
-								height: 10px;
-								position: absolute;
-								top: 12px;
-								right: 12px;
+					.calendar {
+						width: 100%;
+						padding: 4vh 0 4vh;
+						margin: 8vh 0 6vh;
+						.month {
+							padding: 25px 15vh 20px;
+							ul {
+								li {
+									font-size: 36px;
+								}
 							}
 						}
-
+						.table {
+							max-width: 100%;
+							padding: 10px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							overflow-x: auto;
+							.weekdays {
+								font-size: 36px;
+								padding: 10px 20px;
+							}
+							td {
+								font-size: 30px;
+								padding: 10px 20px 20px;
+								position: relative;
+								
+							}
+							.disabled {
+								&:after{
+									content: '';
+									border-radius: 50%;
+									background-color: $blue;
+									width: 10px;
+									height: 10px;
+									position: absolute;
+									top: 12px;
+									right: 12px;
+								}
+							}
+						}
 					}
 				}
 				.contact {
