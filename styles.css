@@ -87,67 +87,69 @@ body {
     margin: 6vh 0 3vh; }
 
 /*description section */
-.description .content {
-  position: relative; }
-.description p {
-  word-spacing: 5px;
-  margin: 0; }
-.description .float-aside {
-  margin: 0 -100px 3vh 0; }
-  .description .float-aside .aside {
+.description {
+  margin-bottom: 5vh; }
+  .description .content {
+    position: relative; }
+  .description p {
+    word-spacing: 5px;
+    margin: 0; }
+  .description .float-aside {
+    margin: 0 -100px 3vh 0; }
+    .description .float-aside .aside {
+      font: 100% "Rozha One", serif;
+      float: right;
+      width: 200px;
+      font-size: 18px;
+      text-align: left;
+      word-spacing: 4px; }
+      .description .float-aside .aside h3 {
+        font: 100% "Palanquin Dark", sans-serif;
+        font-size: 32px;
+        position: relative;
+        margin: 25px 0 50px; }
+        .description .float-aside .aside h3::after {
+          display: block;
+          background: #348db2;
+          width: 70px;
+          height: 3px;
+          position: absolute;
+          content: "";
+          top: 60px; }
+    .description .float-aside p {
+      width: 75%; }
+  .description .cms-notes .note-top {
     font: 100% "Rozha One", serif;
-    float: right;
-    width: 200px;
-    font-size: 18px;
+    font-size: 14px;
+    color: red;
+    width: 10vw;
+    position: absolute;
+    right: -22%;
+    word-spacing: 1px;
     text-align: left;
-    word-spacing: 4px; }
-    .description .float-aside .aside h3 {
-      font: 100% "Palanquin Dark", sans-serif;
-      font-size: 32px;
-      position: relative;
-      margin: 25px 0 50px; }
-      .description .float-aside .aside h3::after {
-        display: block;
-        background: #348db2;
-        width: 70px;
-        height: 3px;
-        position: absolute;
-        content: "";
-        top: 60px; }
-  .description .float-aside p {
-    width: 75%; }
-.description .cms-notes .note-top {
-  font: 100% "Rozha One", serif;
-  font-size: 14px;
-  color: red;
-  width: 10vw;
-  position: absolute;
-  right: -22%;
-  word-spacing: 1px;
-  text-align: left;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  display: flex; }
-  .description .cms-notes .note-top img {
-    background-repeat: no-repeat;
-    width: 8%;
-    height: 8%;
-    display: inline-block;
-    background-size: contain;
-    font-size: 0; }
-  .description .cms-notes .note-top .note-text {
-    margin-left: 15px; }
-.description .cms-notes .note-bottom {
-  font: 100% "Rozha One", serif;
-  font-size: 14px;
-  color: red;
-  width: 10vw;
-  position: absolute;
-  right: -25%;
-  bottom: 10%;
-  word-spacing: 1px;
-  text-align: left;
-  margin-top: 10px; }
+    margin-left: 15px;
+    margin-bottom: 10px;
+    display: flex; }
+    .description .cms-notes .note-top img {
+      background-repeat: no-repeat;
+      width: 8%;
+      height: 8%;
+      display: inline-block;
+      background-size: contain;
+      font-size: 0; }
+    .description .cms-notes .note-top .note-text {
+      margin-left: 15px; }
+  .description .cms-notes .note-bottom {
+    font: 100% "Rozha One", serif;
+    font-size: 14px;
+    color: red;
+    width: 10vw;
+    position: absolute;
+    right: -25%;
+    bottom: 10%;
+    word-spacing: 1px;
+    text-align: left;
+    margin-top: 10px; }
 
 /*booking section*/
 .booking {
@@ -155,10 +157,9 @@ body {
   height: 90vh;
   width: 100%;
   margin: 0 auto;
-  padding-top: 4vh;
-  overflow: hidden; }
+  padding-top: 4vh; }
   .booking h2 {
-    margin: 0;
+    margin: 0 0 6vh;
     padding: 0;
     color: #fff;
     font-size: 75px;
@@ -174,6 +175,58 @@ body {
       line-height: 75px;
       margin-left: 40px;
       top: 75px; }
+  .booking .reservation-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red; }
+    .booking .reservation-box .calendar {
+      color: #fff;
+      border-radius: 20px;
+      padding: 30px 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      max-width: 49%; }
+      .booking .reservation-box .calendar .month {
+        width: 100%;
+        text-align: center;
+        padding: 25px 160px 20px; }
+        .booking .reservation-box .calendar .month ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0; }
+          .booking .reservation-box .calendar .month ul li {
+            font-size: 20px; }
+        .booking .reservation-box .calendar .month .prev {
+          float: left; }
+        .booking .reservation-box .calendar .month .next {
+          float: right; }
+      .booking .reservation-box .calendar .weekdays {
+        margin: 0;
+        padding: 10px 50px;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        .booking .reservation-box .calendar .weekdays li {
+          text-align: center; }
+      .booking .reservation-box .calendar .days {
+        padding: 10px 50px;
+        margin: 0;
+        list-style-type: none; }
+        .booking .reservation-box .calendar .days li {
+          list-style-type: none;
+          display: inline-block;
+          width: 13%;
+          text-align: center;
+          margin-bottom: 18px;
+          font-size: 16px;
+          position: relative; }
+          .booking .reservation-box .calendar .days li .active {
+            padding: 5px 10px;
+            background: #348db2;
+            color: #fff !important;
+            border-radius: 50%; }
 
 @media (max-width: 991px) {
   .container {
@@ -273,13 +326,41 @@ body {
 
   .booking {
     background: url("assets/booking_bg.png") center/cover no-repeat;
-    height: 90vh;
-    padding-top: 5vh; }
-    .booking h2 {
-      margin: 0 15%; }
-      .booking h2::after {
-        max-width: 20%;
-        height: 4px;
-        margin-left: 10%; } }
+    height: auto;
+    padding-top: 5vh 0; }
+    .booking .content {
+      margin: 0 auto;
+      max-width: 95%; }
+      .booking .content h2 {
+        margin: 0 15%; }
+        .booking .content h2::after {
+          max-width: 20%;
+          height: 4px;
+          margin-left: 10%; }
+      .booking .content .reservation-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .booking .content .reservation-box .calendar {
+          max-width: 100%;
+          padding: 0;
+          margin: 2vh 0; }
+          .booking .content .reservation-box .calendar .month {
+            padding: 25px 15vh 20px; }
+            .booking .content .reservation-box .calendar .month ul li {
+              font-size: 36px; }
+          .booking .content .reservation-box .calendar .weekdays {
+            font-size: 36px;
+            padding: 10px 20px; }
+          .booking .content .reservation-box .calendar .days {
+            padding: 10px 20px 20px; }
+            .booking .content .reservation-box .calendar .days li {
+              font-size: 28px; }
+              .booking .content .reservation-box .calendar .days li .active {
+                padding: 3px 12px;
+                background: #348db2;
+                color: #fff !important;
+                border-radius: 50%; } }
 
 /*# sourceMappingURL=styles.css.map */
