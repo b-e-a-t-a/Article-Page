@@ -111,19 +111,18 @@
 						</table>
 					</div>
 					<div class="contact">
-						<form>
-								<input type="email" placeholder="brande.mayert@moriah.me" required minlength=5 maxlength=50 />
-								<select id="">
+						<form name="form" method="post" id="form">
+								<input name="email" type="email" placeholder="brande.mayert@moriah.me" id="field-email" required minlength=5 maxlength=50 />
+								<select id="selectCity" onChange="changeSelect(this.value)">
 									<option value="Oslo">Oslo</option>
 									<option value="Trondheim">Trondheim</option>
 									<option value="Bergen">Bergen</option>
 								</select>
-								<select id="">
-									<option value="Grand Hotel">Grand Hotel</option>
-									<option value="Hilton Hotel">Hilton Hotel</option>
-									<option value="Mercury Hotel">Mercury Hotel</option>
+								<select id="selectHotel">
+									<option value="Oslo">Grand Hotel</option>
+									<option value="Oslo">Hilton Hotel</option>
 								</select>
-								<button id="przycisk" class="button" type="submit">BOOK</button>
+								<button id="button" class="button" type="submit">BOOK</button>
 						</form>
 					</div>
 				</div>

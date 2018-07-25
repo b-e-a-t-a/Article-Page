@@ -262,6 +262,8 @@ body {
             border-color: red; }
           .booking .reservation-box .contact form input:valid {
             border: 1px solid green; }
+          .booking .reservation-box .contact form input:invalid {
+            border: 1px solid red; }
         .booking .reservation-box .contact form select {
           margin: 10px 0;
           width: 100%;

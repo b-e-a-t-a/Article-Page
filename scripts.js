@@ -67,13 +67,47 @@ function reserveDay() {
 
 			var pickedDay = $target.innerHTML;
 
-			console.clear();
+			//console.clear();
 			console.log('picked day: ' + pickedDay);
 
 		});
-
-	}
-	
+	}	
 }
 
 reserveDay();
+
+//form validation on click
+function val() {
+	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	
+	if (reg.test(form.email.value) == false) {
+
+		alert('invalid email');
+		form.email.focus();
+		return false;
+	}
+	return true;
+}
+
+button.addEventListener('click', function(e) {
+	return val();
+});
+
+
+//dropDown selection
+var hotelsByCity = {
+    Oslo: ["Grand Hotel", "Hilton Hotel"],
+    Trondheim: ["Trondheim Hotel", "Resort Hotel"],
+    Bergen: ["Bergen Hotel", "Yellow Hotel"]
+}
+
+function changeSelect(value) {
+    document.getElementById("selectHotel").innerHTML = "<option></option>";
+    
+    var hotelOptions = "";
+
+    for (categoryId in hotelsByCity[value]) {
+        hotelOptions += "<option>" + hotelsByCity[value][categoryId] + "</option>";
+    }
+        document.getElementById("selectHotel").innerHTML = hotelOptions;
+}

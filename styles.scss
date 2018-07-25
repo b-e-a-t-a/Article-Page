@@ -321,7 +321,9 @@ body {
 					&:valid {
 						border: 1px solid green;
 					}
-
+					&:invalid {
+						border: 1px solid red;
+					}		
 				}
 				select {
 					margin: 10px 0;
