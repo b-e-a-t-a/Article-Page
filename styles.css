@@ -227,6 +227,62 @@ body {
             background: #348db2;
             color: #fff !important;
             border-radius: 50%; }
+    .booking .reservation-box .contact {
+      width: 49%;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 0 4%; }
+      .booking .reservation-box .contact form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding: 50px 0 30px;
+        min-height: 100%; }
+        .booking .reservation-box .contact form input {
+          margin: 20px 0 10px;
+          width: 100%;
+          padding: 20px;
+          border-radius: 30px;
+          background-color: #eaf3f7;
+          display: block;
+          font-size: 18px;
+          font-weight: 600;
+          border: none;
+          outline: none;
+          transition: .5s all; }
+          .booking .reservation-box .contact form input:focus {
+            color: #348db2;
+            border-color: red; }
+          .booking .reservation-box .contact form input:valid {
+            border: 1px solid green; }
+        .booking .reservation-box .contact form select {
+          margin: 10px 0;
+          width: 100%;
+          padding: 20px;
+          border-radius: 30px;
+          background-color: #eaf3f7;
+          display: block;
+          font-size: 18px;
+          font-weight: 600;
+          border: none;
+          outline: none;
+          cursor: pointer; }
+        .booking .reservation-box .contact form button {
+          margin: 50px 0 0;
+          width: 100%;
+          padding: 20px;
+          border-radius: 30px;
+          background-color: #348db2;
+          color: #fff;
+          border: none;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          outline: none; }
+          .booking .reservation-box .contact form button:hover {
+            background-color: green; }
 
 @media (max-width: 991px) {
   .container {
@@ -327,7 +383,7 @@ body {
   .booking {
     background: url("assets/booking_bg.png") center/cover no-repeat;
     height: auto;
-    padding-top: 5vh 0; }
+    padding: 5vh 0 12vh; }
     .booking .content {
       margin: 0 auto;
       max-width: 95%; }
@@ -345,7 +401,7 @@ body {
         .booking .content .reservation-box .calendar {
           max-width: 100%;
           padding: 0;
-          margin: 2vh 0; }
+          margin: 8vh 0 6vh; }
           .booking .content .reservation-box .calendar .month {
             padding: 25px 15vh 20px; }
             .booking .content .reservation-box .calendar .month ul li {
@@ -361,6 +417,29 @@ body {
                 padding: 3px 12px;
                 background: #348db2;
                 color: #fff !important;
-                border-radius: 50%; } }
+                border-radius: 50%; }
+        .booking .content .reservation-box .contact {
+          width: 100%;
+          padding: 0 4%; }
+          .booking .content .reservation-box .contact form {
+            padding: 50px 0 30px; }
+            .booking .content .reservation-box .contact form input {
+              margin: 20px 0 10px;
+              width: 100%;
+              padding: 30px 50px;
+              border-radius: 40px;
+              font-size: 24px; }
+            .booking .content .reservation-box .contact form select {
+              margin: 10px 0;
+              width: 100%;
+              padding: 30px 50px;
+              border-radius: 40px;
+              font-size: 24px; }
+            .booking .content .reservation-box .contact form button {
+              margin: 90px 0 80px;
+              width: 100%;
+              padding: 30px;
+              border-radius: 40px;
+              font-size: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */
