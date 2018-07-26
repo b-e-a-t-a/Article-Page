@@ -6,11 +6,6 @@ var month = today.getMonth() + 1;
 
 var day = today.getDate(); //25
 
-window.onload = function() {
-	//console.log('today: ' + today);
-	console.log('todays day: ' + day);
-}
-
 var td = document.getElementsByTagName('td');
 
 function markToday() {

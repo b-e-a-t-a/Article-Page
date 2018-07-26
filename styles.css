@@ -118,10 +118,11 @@ body {
           top: 60px; }
     .description .float-aside p {
       width: 75%; }
+  .description img {
+    margin-bottom: 30px; }
   .description .cms-notes .note-top {
     font: 100% "Rozha One", serif;
     font-size: 14px;
-    color: red;
     width: 10vw;
     position: absolute;
     right: -22%;
@@ -129,7 +130,8 @@ body {
     text-align: left;
     margin-left: 15px;
     margin-bottom: 10px;
-    display: flex; }
+    display: flex;
+    bottom: 260px; }
     .description .cms-notes .note-top img {
       background-repeat: no-repeat;
       width: 8%;
@@ -138,11 +140,11 @@ body {
       background-size: contain;
       font-size: 0; }
     .description .cms-notes .note-top .note-text {
-      margin-left: 15px; }
+      margin-left: 15px;
+      display: block; }
   .description .cms-notes .note-bottom {
     font: 100% "Rozha One", serif;
     font-size: 14px;
-    color: red;
     width: 10vw;
     position: absolute;
     right: -25%;
@@ -150,15 +152,17 @@ body {
     word-spacing: 1px;
     text-align: left;
     margin-top: 10px; }
+  .description p:last-child {
+    margin-top: 30px; }
 
 /*booking section*/
 .booking {
   background: url("assets/booking_bg.png") 0/cover no-repeat;
   background-position: center;
-  height: 90vh;
+  height: auto;
   width: 100%;
   margin: 0 auto;
-  padding-top: 5vh; }
+  padding: 5vh 0 10vh; }
   .booking h2 {
     margin: 0 0 6vh;
     padding: 0;
@@ -262,7 +266,7 @@ body {
         align-items: center;
         justify-content: space-around;
         width: 100%;
-        padding: 50px 0 30px;
+        padding: 40px 0 30px;
         min-height: 100%; }
         .booking .reservation-box .contact form input {
           margin: 20px 0 10px;
@@ -389,7 +393,7 @@ body {
         right: 0;
         border-top: 3px solid #808080;
         padding-top: 2%;
-        margin-bottom: 2vh; }
+        margin-bottom: 1vh; }
         .description .cms-notes .note-top img {
           width: 2%;
           height: 2%;
