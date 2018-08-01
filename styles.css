@@ -95,19 +95,16 @@ body {
     word-spacing: 5px;
     margin: 0; }
   .description .float-aside {
-    margin: 0 -100px 3vh 0; }
+    margin: 0 -6vw 3vh 0; }
     .description .float-aside .aside {
       font: 100% "Rozha One", serif;
       float: right;
-      width: 200px;
-      font-size: 18px;
-      text-align: left;
-      word-spacing: 4px; }
+      width: 20%; }
       .description .float-aside .aside h3 {
         font: 100% "Palanquin Dark", sans-serif;
         font-size: 32px;
         position: relative;
-        margin: 25px 0 50px; }
+        margin: 15px 0 50px; }
         .description .float-aside .aside h3::after {
           display: block;
           background: #348db2;
@@ -115,7 +112,15 @@ body {
           height: 3px;
           position: absolute;
           content: "";
-          top: 60px; }
+          top: 70px; }
+      .description .float-aside .aside p {
+        width: 200px;
+        font-size: 18px;
+        text-align: left;
+        word-spacing: 4px;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto; }
     .description .float-aside p {
       width: 75%; }
   .description img {
@@ -123,7 +128,8 @@ body {
   .description .cms-notes .note-top {
     font: 100% "Rozha One", serif;
     font-size: 14px;
-    width: 10vw;
+    max-width: 20%;
+    /*width: 10vw;*/
     position: absolute;
     right: -22%;
     word-spacing: 1px;
@@ -141,17 +147,23 @@ body {
       font-size: 0; }
     .description .cms-notes .note-top .note-text {
       margin-left: 15px;
-      display: block; }
+      display: block;
+      overflow: hidden;
+      max-height: 70px; }
   .description .cms-notes .note-bottom {
     font: 100% "Rozha One", serif;
     font-size: 14px;
-    width: 10vw;
+    /*width: 10vw;*/
+    max-width: 20%;
     position: absolute;
     right: -25%;
-    bottom: 10%;
+    bottom: 13%;
     word-spacing: 1px;
     text-align: left;
-    margin-top: 10px; }
+    margin-top: 10px;
+    overflow: hidden;
+    max-height: 70px;
+    display: block; }
   .description p:last-child {
     margin-top: 30px; }
 
@@ -167,13 +179,13 @@ body {
     margin: 0 0 6vh;
     padding: 0;
     color: #fff;
-    font-size: 75px;
+    font-size: 70px;
     font-weight: 400;
     position: relative; }
     .booking h2::after {
       display: inline-block;
       background: #fff;
-      width: 195px;
+      width: 20%;
       height: 3px;
       position: absolute;
       content: "";
@@ -315,6 +327,30 @@ body {
           .booking .reservation-box .contact form button:hover {
             background-color: green; }
 
+@media (max-width: 1500px) {
+  .description .cms-notes .note-top, .description .cms-notes .note-bottom {
+    display: none; } }
+@media (max-width: 1200px) {
+  .description {
+    margin-bottom: 25vh; }
+    .description .float-aside {
+      margin: 0 auto; }
+      .description .float-aside .aside {
+        float: none;
+        width: 80%;
+        font-size: 22px;
+        margin: 0 auto; }
+        .description .float-aside .aside h3 {
+          font-size: 38px;
+          margin: 0 0 5%; }
+          .description .float-aside .aside h3::after {
+            top: 70px; }
+        .description .float-aside .aside p {
+          width: 100%;
+          font-size: 20px; }
+      .description .float-aside p {
+        width: 100%;
+        margin: 5% 0; } }
 @media (max-width: 991px) {
   .container {
     margin: 0 auto;
@@ -362,54 +398,62 @@ body {
 
   .description {
     margin-bottom: 25vh; }
-    .description p {
-      font-size: 20px; }
-    .description .float-aside {
-      margin: 0 auto; }
-      .description .float-aside .aside {
-        float: none;
-        width: 80%;
-        font-size: 22px;
-        margin: 0 auto; }
-        .description .float-aside .aside h3 {
-          font-size: 38px;
-          margin: 0 0 5%; }
-          .description .float-aside .aside h3::after {
-            top: 70px; }
-      .description .float-aside p {
-        width: 100%;
-        margin: 5% 0; }
-    .description img {
-      max-width: 100%;
+    .description .content {
       height: auto; }
-    .description .cms-notes {
-      margin: 5% 0; }
-      .description .cms-notes .note-top {
-        font-size: 18px;
-        line-height: 18px;
-        width: 100%;
-        position: absolute;
-        bottom: -3%;
-        right: 0;
-        border-top: 3px solid #808080;
-        padding-top: 2%;
-        margin-bottom: 1vh; }
-        .description .cms-notes .note-top img {
-          width: 2%;
-          height: 2%;
-          transform: rotate(90deg); }
-        .description .cms-notes .note-top .note-text {
-          margin-left: 15px; }
-      .description .cms-notes .note-bottom {
-        font-size: 18px;
-        line-height: 18px;
-        width: 95.5%;
-        position: absolute;
-        bottom: -5%;
-        right: 0;
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-        display: inline-block; }
+      .description .content p {
+        font-size: 20px; }
+      .description .content .float-aside {
+        margin: 0 auto; }
+        .description .content .float-aside .aside {
+          float: none;
+          width: 80%;
+          font-size: 22px;
+          margin: 0 auto; }
+          .description .content .float-aside .aside h3 {
+            font-size: 38px;
+            margin: 0 0 5%; }
+            .description .content .float-aside .aside h3::after {
+              top: 70px; }
+        .description .content .float-aside p {
+          width: 100%;
+          margin: 5% 0; }
+      .description .content img {
+        max-width: 100%;
+        height: auto; }
+      .description .content .cms-notes {
+        margin: 5% 0; }
+        .description .content .cms-notes .note-top {
+          font-size: 18px;
+          line-height: 18px;
+          width: 100%;
+          max-width: 100%;
+          position: absolute;
+          bottom: -4%;
+          right: 0;
+          /*border-top: 3px solid $darkGrey;*/
+          box-shadow: inset 0 5px 5px -5px #29627e;
+          padding-top: 1%;
+          margin-bottom: 1vh;
+          display: flex; }
+          .description .content .cms-notes .note-top img {
+            width: 2%;
+            height: 2%;
+            transform: rotate(90deg); }
+          .description .content .cms-notes .note-top .note-text {
+            margin-left: 25px;
+            padding-bottom: 5%; }
+        .description .content .cms-notes .note-bottom {
+          font-size: 18px;
+          line-height: 18px;
+          max-width: 95.5%;
+          position: absolute;
+          bottom: -5%;
+          right: 0;
+          left: 5%;
+          padding-top: 5%;
+          margin-bottom: 2vh;
+          display: inline-block;
+          font-size: 0.9em; }
 
   .booking {
     background: url("assets/booking_bg.png") center/cover no-repeat;
